@@ -52,6 +52,15 @@ Dependencies are resolved from the Drake Maven repository, <https://maven.drakes
 To use an already built jar on the 26.x line, port it with `scripts/portar_addons.py <input> <output>` from `ai-hub`
 (relocates the Dallas fork package to the universal one and raises `api-version` to 1.21).
 
+### Running on 26.x (Paper 26.2, Java 25)
+
+No separate build is needed: the 1.21.1 jar (`./gradlew build`) is ported as-is with
+`python3 scripts/portar_addons.py <input-dir> <output-dir> --solo SlimefunTranslation`, then dropped into `plugins/`.
+The translator is English-only (no `es` package). Requires Slimefun `11.0-Universal-26.x-SNAPSHOT`, PlaceholderAPI and
+ProtocolLib 5.4.0 (it loads on Paper 26.2 with an "untested version" warning; packet hooks stay on ProtocolLib, no
+packetevents port). Status: the ported jar passes static checks (no unresolved core classes except an unused GuizhanLib
+helper); runtime on 26.x still has to be confirmed on a live server.
+
 ## Upstream & license
 
 Original work by ybw0014 and the GuizhanCraft community.
