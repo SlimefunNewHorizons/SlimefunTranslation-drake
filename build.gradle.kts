@@ -38,6 +38,8 @@ tasks.named<Jar>("jar") {
     enabled = false
 }
 
+tasks.build { dependsOn(tasks.shadowJar) }
+
 tasks.shadowJar {
     // GuizhanLib sigue referenciando el paquete legacy de Slimefun; en runtime solo existe el fork Drake.
     relocate("io.github.thebusybiscuit.slimefun4", "com.github.drakescraft_labs.slimefun4")
