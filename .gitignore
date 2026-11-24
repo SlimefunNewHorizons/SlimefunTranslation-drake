@@ -36,3 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
+
+# Graphify local AST cache
+graphify-out/
