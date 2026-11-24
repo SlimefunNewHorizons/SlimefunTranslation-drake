@@ -32,7 +32,7 @@ public class TagMisconfigurationException extends Exception {
     }
 
     /**
-     * This constructs a new {@link com.github.drakescraft_labs.slimefun4.api.exceptions.TagMisconfigurationException} for the given
+     * This constructs a new {@link io.github.thebusybiscuit.slimefun4.api.exceptions.TagMisconfigurationException} for the given
      * {@link SlimefunTranslationTag}'s {@link NamespacedKey} with the provided context.
      *
      * @param key   The {@link NamespacedKey} of {@link SlimefunTranslationTag}

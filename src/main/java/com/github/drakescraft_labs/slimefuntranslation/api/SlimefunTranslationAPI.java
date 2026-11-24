@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 
 import com.github.drakescraft_labs.slimefuntranslation.SlimefunTranslation;
 import com.github.drakescraft_labs.slimefuntranslation.api.translation.lore.LoreHandler;

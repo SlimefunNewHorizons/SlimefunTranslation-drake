@@ -6,9 +6,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.github.drakescraft_labs.slimefun4.api.player.PlayerProfile;
-import com.github.drakescraft_labs.slimefun4.core.guide.SlimefunGuide;
-import com.github.drakescraft_labs.slimefun4.core.guide.SlimefunGuideMode;
+import io.github.thebusybiscuit.slimefun4.api.player.PlayerProfile;
+import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuide;
+import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuideMode;
 
 import net.guizhanss.guizhanlib.minecraft.commands.AbstractCommand;
 import com.github.drakescraft_labs.slimefuntranslation.core.commands.AbstractSubCommand;

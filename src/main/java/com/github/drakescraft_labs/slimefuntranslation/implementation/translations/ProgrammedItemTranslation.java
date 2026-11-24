@@ -11,7 +11,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 
 import com.github.drakescraft_labs.slimefuntranslation.SlimefunTranslation;
 import com.github.drakescraft_labs.slimefuntranslation.api.translation.ItemTranslation;

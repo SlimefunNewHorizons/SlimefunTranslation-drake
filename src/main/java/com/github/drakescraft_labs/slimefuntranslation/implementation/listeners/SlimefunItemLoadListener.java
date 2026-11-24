@@ -5,7 +5,7 @@ import javax.annotation.Nonnull;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import com.github.drakescraft_labs.slimefun4.api.events.SlimefunItemRegistryFinalizedEvent;
+import io.github.thebusybiscuit.slimefun4.api.events.SlimefunItemRegistryFinalizedEvent;
 
 import com.github.drakescraft_labs.slimefuntranslation.SlimefunTranslation;
 

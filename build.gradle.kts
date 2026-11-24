@@ -1,12 +1,13 @@
 plugins {
     java
-    id("com.gradleup.shadow") version "8.3.10"
-    id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
+    id("com.gradleup.shadow") version "9.4.1"
+    id("de.eldoria.plugin-yml.bukkit") version "0.8.0"
 }
 
-version = "11.0-Drake-1.21.1-SNAPSHOT"
+version = "11.0-Universal-26.x-SNAPSHOT"
 
 repositories {
+    maven("https://pack.drakescraft.cl/builds/maven/")
     mavenLocal()
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
@@ -17,11 +18,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
-    compileOnly("com.github.drakescraft_labs:slimefun-core:11.0-Drake-1.21.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:26.2.build.129-stable")
+    compileOnly("com.github.drakescraft_labs:slimefun-core:11.0-Universal-26.x-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    compileOnly("org.projectlombok:lombok:1.18.34")
-    annotationProcessor("org.projectlombok:lombok:1.18.34")
+    compileOnly("org.projectlombok:lombok:1.18.46")
+    annotationProcessor("org.projectlombok:lombok:1.18.46")
 
     compileOnly("me.clip:placeholderapi:2.11.6")
     // 5.4+: mapeo 1.21.4+ (HashedStack en WINDOW_CLICK). En el servidor usar ProtocolLib ≥5.4.0.
@@ -31,7 +32,8 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 tasks.named<Jar>("jar") {
@@ -41,11 +43,9 @@ tasks.named<Jar>("jar") {
 tasks.build { dependsOn(tasks.shadowJar) }
 
 tasks.shadowJar {
-    // GuizhanLib sigue referenciando el paquete legacy de Slimefun; en runtime solo existe el fork Drake.
-    relocate("io.github.thebusybiscuit.slimefun4", "com.github.drakescraft_labs.slimefun4")
     relocate("net.guizhanss.guizhanlib", "com.github.drakescraft_labs.slimefuntranslation.libs.guizhanlib")
     relocate("org.bstats", "com.github.drakescraft_labs.slimefuntranslation.libs.bstats")
-    archiveFileName.set("SlimefunTranslation-11.0-Drake-1.21.1-SNAPSHOT.jar")
+    archiveFileName.set("SlimefunTranslation-11.0-Universal-26.x-SNAPSHOT.jar")
     // minimize() eliminaba clases de GuizhanLib → NoClassDefFoundError AbstractAddon en runtime
 }
 
